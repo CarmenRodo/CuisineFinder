@@ -5,16 +5,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "css:build": "node-sass --omit-source-map-url assets/sass/style.scss assets/css/style.scss",
+    "css:watch": "npm run css:build -- --watch"
   },
   "dependencies": {
-    "bulma": "^0.9.4",
-    "pinia": "^2.1.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
+    "bulma": "^0.9.4",
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.5",
     "vite": "^4.4.11"
   }
 }
