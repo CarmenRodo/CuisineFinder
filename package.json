@@ -2,6 +2,7 @@
   "name": "vuefp",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://carmenrodo.github.io/CuisineFinder/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
