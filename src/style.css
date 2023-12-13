@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.active {
+  display: block;
+}
+
+svg {
+  filter: invert(11%) sepia(74%) saturate(7095%) hue-rotate(359deg) brightness(112%) contrast(113%);
+}

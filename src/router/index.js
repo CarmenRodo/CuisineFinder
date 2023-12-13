@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import SearchLetter from '../views/SearchLetter.vue'
+import SearchIngredient from '../views/SearchIngredient.vue'
+import SearchName from '../views/SearchName.vue'
+import MealDetails from '../views/MealDetails.vue'
+import SearchMealsByIngredient from '../views/SearchMealsByIngredient.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,17 +14,29 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/meals-by-letter/:letter?',
+      name: 'MealsByLetter',
+      component: SearchLetter
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/LoginView.vue')
+      path: '/meals-by-name/:name?',
+      name: 'MealsByName',
+      component: SearchName
+    },
+    {
+      path: '/ingredients/',
+      name: 'Ingredients',
+      component: SearchIngredient
+    },
+    {
+      path: '/ingredients/:ingredient',
+      name: 'MealsByIngredient',
+      component: SearchMealsByIngredient
+    },
+    {
+      path: '/meal-details/:id?',
+      name: 'MealDetails',
+      component: MealDetails
     }
   ]
 })
